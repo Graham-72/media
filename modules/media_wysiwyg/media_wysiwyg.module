@@ -123,7 +123,7 @@ function media_wysiwyg_pre_render_text_format($element) {
   }
 
   $field = &$element['value'];
-  if (!isset($field['#value'])) {
+  if (!isset($field['#value']) && $field['#value'] != '') {
     return $element;
   }
 
